@@ -11,6 +11,14 @@ module TicTacToe
 
     def initialize_grid(board)
       grid = Array.new(board) { Array.new(board) }
+      for i in 0..grid.count-1
+        for j in 0..grid.count-1
+          grid[i][j] = x
+          x+=1
+          j+=1
+        end
+        i+=1
+      end
     end
 
     def winner
