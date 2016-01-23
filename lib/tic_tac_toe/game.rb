@@ -56,5 +56,19 @@ module TicTacToe
       end
     end
 
+    def set_chip(number)
+      @no_set_chip = true
+      for i in 0..grid.count-1
+        for j in 0..grid.count-1
+          if grid[i][j] == number
+            @no_set_chip = false
+          end
+          j+=1
+        end
+        i+=1
+      end
+      return false if @no_set_chip == true
+    end
+
   end
 end
