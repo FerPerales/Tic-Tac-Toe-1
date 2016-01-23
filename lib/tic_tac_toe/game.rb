@@ -11,6 +11,7 @@ module TicTacToe
 
     def initialize_grid(board)
       grid = Array.new(board) { Array.new(board) }
+      x = 1
       for i in 0..grid.count-1
         for j in 0..grid.count-1
           grid[i][j] = x
@@ -24,6 +25,7 @@ module TicTacToe
     def winner
       return "x" if winning_line("x")
       return "o" if winning_line("o")
+      return "draw" if draw?
       nil
     end
 
@@ -33,6 +35,14 @@ module TicTacToe
       return mark if grid[0][0] == mark && grid[1][1] == mark && grid[2][2] == mark
       return mark if grid[0][2] == mark && grid[1][1] == mark && grid[2][0] == mark
       nil
+    end
+
+    def draw
+      @new_grid = grid
+      @new_grid.flatten!
+      @new_grid2 = @new_grid.select { |i| i !="x" && i !="o" }
+      return false if new_grid2.count > 0
+      return true if new_grid2.count = 0
     end
 
     def first_gamer
