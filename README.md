@@ -38,6 +38,7 @@ afetr you can access the next method
    4 | 5 | 6
    ---------
    7 | 8 | 9
+   ---------
 
 ## Development
 
