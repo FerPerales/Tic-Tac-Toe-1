@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tic_tac_toe`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Play Tic Tac Toe Game
 
 ## Installation
 
@@ -22,7 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+for use this gem you need create a instance the Game class
+
+for example : a.TicTacToe::Game.new
+afetr you can access the next method
+
+- initialize_grid(value) -> with this method you can initialize a board
+- winner -> with this method you'll know if you are a winner
+- chip_value -> with this method you'll get a chip value
+- set_chip(value) -> with this method you can set a chip in the board,
+  if you board is 3x3 the gem visualize the game in this form
+
+   1 | 2 | 3
+   ---------
+   4 | 5 | 6
+   ---------
+   7 | 8 | 9
 
 ## Development
 
