@@ -54,7 +54,7 @@ module TicTacToe
 
     def draw
       @new_grid = @grid
-      @new_grid.flatten
+      @new_grid = @new_grid.flatten
       @new_grid2 = @new_grid.select { |i| i !="x" && i !="o" }
       @new_grid2.count <= 0
     end
