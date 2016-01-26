@@ -32,6 +32,12 @@ afetr you can access the next method
 - chip_value -> with this method you'll get a chip value
 - set_chip(value) -> with this method you can set a chip in the board,
   if you board is 3x3 the gem visualize the game in this form
+- if you want to follow the game after having lost you only need to
+  initialize_grid(value).
+
+- with this gem yo can start any size board but only with 3x3 size you
+  can win horizontally, vertically and diagonally, for the other sizes you
+  can only win so horizontally and vertical.
 
    1 | 2 | 3
    ---------
